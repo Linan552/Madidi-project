@@ -8,6 +8,19 @@ Once you have the appropriate packages (see list below) download the entire 02_R
 A results folder will be created with figures, stats, etc. 
 Note: We have provided a toy dataset (made up of fictional data) to run the scripts. Original data used in our study can be found at https://doi.org/10.5281/zenodo.4276558. 
 
+## what R-packages you will need to run these scripts
+- library(dplyr)
+- library(data.table)
+- library(V.PhyloMaker)
+- library(picante)
+- library(phytools)
+- library(vegan)
+- library(latticeExtra)
+- library(plyr)
+- library(gtools)
+- library(geosphere)
+- library(grr)
+
 ## what each script does
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
@@ -57,16 +70,3 @@ NOTE: plot comparisons are sub-selected to create datasets that compare turnover
 - 'SppNByClade.tiff'  graphs depicting the distribution of species across clades.
 - 'CladeRangeSizes.tiff'  elevational ranges of clades 
 - 'Results_summary.txt' 
-
-## what R-packages you will need to run these scripts
-- library(dplyr)
-- library(data.table)
-- library(V.PhyloMaker)
-- library(picante)
-- library(phytools)
-- library(vegan)
-- library(latticeExtra)
-- library(plyr)
-- library(gtools)
-- library(geosphere)
-- library(grr)
