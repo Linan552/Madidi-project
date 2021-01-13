@@ -63,11 +63,11 @@ NOTE: plot comparisons are sub-selected to create datasets that compare turnover
 - 'S.wg.null.rds'  
 
 **OUTPUTS:** 
-- 'TurnoverGradients.tiff'  *graph of total turnover of plots across elevational distance
-- 'ProportionOfTurnoverGradients.tiff'  *graphs comparing components of turnover to null models. Examining across elevational gradient (top) and geographcic distance (bottom)
-- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  *graphs comparing just the among-component of turnover to null models (similar to 'ProportionOfTurnoverGradients.tiff')
-- 'LogitProportionOfTurnoverGradients.tiff' *same graphs as 'ProportionOfTurnoverGradients.tiff' but with logit transformed regressions.
-- 'GeoVsElevDists.tiff' *graph showing the selection of plot comparisions used across geographic and elevational distance
-- 'SppNByClade.tiff'  *graphs depicting the distribution of species across clades.
-- 'CladeRangeSizes.tiff'  *elevational ranges of clades 
+- 'TurnoverGradients.tiff'  *graph of total turnover of plots across elevational distance*
+- 'ProportionOfTurnoverGradients.tiff'  *graphs comparing components of turnover to null models. Examining across elevational gradient (top) and geographcic distance (bottom)*
+- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  *graphs comparing just the among-component of turnover to null models (similar to 'ProportionOfTurnoverGradients.tiff')*
+- 'LogitProportionOfTurnoverGradients.tiff' *same graphs as 'ProportionOfTurnoverGradients.tiff' but with logit transformed regressions.*
+- 'GeoVsElevDists.tiff' *graph showing the selection of plot comparisions used across geographic and elevational distance*
+- 'SppNByClade.tiff'  *graphs depicting the distribution of species across clades.*
+- 'CladeRangeSizes.tiff'  *elevational ranges of clades* 
 - 'Results_summary.txt' 
