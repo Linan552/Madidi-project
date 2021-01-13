@@ -19,7 +19,8 @@ uses the tree dataset to generate a time calibrated phylogeny by placing taxa in
 - 'phylomaker_phylo_all_S3.tre' phylogeny using scenario 3 (see V.phylomaker manual)
 - 'phylomaker_phylo_all_S1.tre' phylogeny using scenario 1 (see V.phylomaker manual)
 ### '03_turnover_decomposition_2021-01-11.R' 
-divides phylogeny into clades based on specified age (30 or 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.   
+divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.  
+NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory. 
 **INPUTS:** 
 - 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
 - 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
@@ -28,11 +29,34 @@ divides phylogeny into clades based on specified age (30 or 60 my old) and decom
 **OUTPUTS:** 
 - 'BC.total.emp.rds' Bray-Curtis turnover between plots (your empirical data)
 - 'S.total.emp.rds' Sorenson turnover between plots (your empirical data)
-- 'BC.ag.null.rds'  Bray-Curtis among-clade component (proportion) of turnover
-- 'BC.wg.null.rds'  Bray-Curtis within-clade component (proportion) of turnover
-- 'BC.BC.ws.null.rds'  Bray-Curtis within-species component (proportion) of turnover
-- 'S.ag.null.rds'  Sorenson among-clade component (proportion) of turnover
-- 'S.wg.null.rds'  Sorenson within-clade component (proportion) of turnover
+- 'BC.ag.null.rds'  null model Bray-Curtis among-clade component (proportion) of turnover
+- 'BC.wg.null.rds'  null model Bray-Curtis within-clade component (proportion) of turnover
+- 'BC.BC.ws.null.rds'  null model Bray-Curtis within-species component (proportion) of turnover
+- 'S.ag.null.rds'  null model Sorenson among-clade component (proportion) of turnover
+- 'S.wg.null.rds'  null model Sorenson within-clade component (proportion) of turnover
+- 'SpeciesData.csv'  
+- 'CladeData.csv'  
+- 'clade.data.null.rds' 
+### '04_visualize_EVERYTHING_2021-01-12.R' 
+generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.  
+**INPUTS:** 
+- 'BC.total.emp.rds' or 'S.total.emp.rds' (must specify Sorenson or Bray-Curtis)
+- 'BC.ag.null.rds', BC.wg.null.rds', and BC.ws.null.rds'; or 'S.ag.null.rds' and 'S.wg.null.rds' 
+- 'SpeciesData.csv'  
+- 'CladeData.csv'  
+- 'clade.data.null.rds'  
+- 'S.wg.null.rds'  
+
+**OUTPUTS:** 
+- 'TurnoverGradients.tiff'  
+- 'ProportionOfTurnoverGradients.tiff'  
+- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  
+- 'LogitProportionOfTurnoverGradients.tiff'
+- 'GeoVsElevDists.tiff'
+- 'SppNByClade.tiff'
+- 'CladeRangeSizes.tiff'
+- 'Results_summary.txt' 
+
 ## what R-packages you will need to run these scripts
 - library(dplyr)
 - library(data.table)
