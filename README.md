@@ -11,8 +11,8 @@ Note: We have provided a toy dataset (made up of fictional data) to run the scri
 ## what each script does
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker)   
-INPUTS: 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots   
-OUTPUTS: 
+**INPUTS:** 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots   
+**OUTPUTS:** 
 - 'diferrentGeneraList.txt' A list of genera that are not found in the Smith et al's mega phylogeny
 - 'tip_info.txt' A table of infomation for each of the "tips" of the phylogeny (species names, genera, family, etc)   
 - 'species_data.txt' A list of unique species and morphospecies found within 'ToyData_trees.txt'
@@ -20,11 +20,11 @@ OUTPUTS:
 - 'phylomaker_phylo_all_S1.tre' phylogeny using scenario 1 (see V.phylomaker manual)
 ### '03_turnover_decomposition_2021-01-11.R' 
 divides phylogeny into clades based on specified age (30 or 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.
-INPUTS: 
+**INPUTS:** 
 - 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
 - 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
 - 'phylomaker_phylo_all_S3.tre' or 'phylomaker_phylo_all_S1.tre' Depending on options used   
-OUTPUTS: 
+**OUTPUTS:** 
 - 'BC.total.emp.rds' Bray-Curtis turnover between plots (your empirical data)
 - 'S.total.emp.rds' Sorenson turnover between plots (your empirical data)
 - 'BC.ag.null.rds'  Bray-Curtis among-clade component (proportion) of turnover
