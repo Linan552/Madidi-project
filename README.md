@@ -20,7 +20,7 @@ Note: We have provided a toy dataset (made up of fictional data) to run the scri
 - library(gtools)
 - library(geosphere)
 - library(grr)
-
+---
 ## what each script does
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
