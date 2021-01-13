@@ -41,8 +41,8 @@ NOTE: this script will do all these calculatations of turnover on a variety of d
 generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.   
 NOTE: plot comparisons are sub-selected to create datasets that compare turnover components across elevational distance while minimizing effects of geographic distance and vice-versa.    
 **INPUTS:** 
-- 'BC.total.emp.rds' or 'S.total.emp.rds' (must specify Sorenson or Bray-Curtis)
-- 'BC.ag.null.rds', BC.wg.null.rds', and BC.ws.null.rds'; or 'S.ag.null.rds' and 'S.wg.null.rds' 
+- 'BC.total.emp.rds' **or** 'S.total.emp.rds' (must specify Sorenson or Bray-Curtis)
+- 'BC.ag.null.rds', BC.wg.null.rds', and BC.ws.null.rds'; **or** 'S.ag.null.rds' and 'S.wg.null.rds' 
 - 'SpeciesData.csv'  
 - 'CladeData.csv'  
 - 'clade.data.null.rds'  
