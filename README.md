@@ -24,29 +24,29 @@ Note: We have provided a toy dataset (made up of fictional data) to run the scri
 ## what each script does
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
-**INPUTS:** 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots   
+**INPUTS:** 'ToyData_trees.txt' *A dataset representing individuals trees surveyed within a set of plots*   
 **OUTPUTS:** 
-- 'diferrentGeneraList.txt' A list of genera that are not found in the Smith et al's mega phylogeny
-- 'tip_info.txt' A table of infomation for each of the "tips" of the phylogeny (species names, genera, family, etc)   
-- 'species_data.txt' A list of unique species and morphospecies found within 'ToyData_trees.txt'
-- 'phylomaker_phylo_all_S3.tre' phylogeny using scenario 3 (see V.phylomaker manual)
-- 'phylomaker_phylo_all_S1.tre' phylogeny using scenario 1 (see V.phylomaker manual)
+- 'diferrentGeneraList.txt' *A list of genera that are not found in the Smith et al's mega phylogeny*
+- 'tip_info.txt' *A table of infomation for each of the "tips" of the phylogeny (species names, genera, family, etc)*   
+- 'species_data.txt' *A list of unique species and morphospecies found within 'ToyData_trees.txt'*
+- 'phylomaker_phylo_all_S3.tre' *phylogeny using scenario 3 (see V.phylomaker manual)*
+- 'phylomaker_phylo_all_S1.tre' *phylogeny using scenario 1 (see V.phylomaker manual)*
 ---
 ### '03_turnover_decomposition_2021-01-11.R' 
 divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.    
 NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory.    
 **INPUTS:** 
-- 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
-- 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
-- 'phylomaker_phylo_all_S3.tre' or 'phylomaker_phylo_all_S1.tre' Depending on options used   
+- 'ToyData_trees.txt' *A dataset representing individuals trees surveyed within a set of plots*  
+- 'ToyData_plots.txt' *A dataset containing info about the plots from which trees were surveyed* 
+- 'phylomaker_phylo_all_S3.tre' or 'phylomaker_phylo_all_S1.tre' *Depending on options used*   
 **OUTPUTS:** 
-- 'BC.total.emp.rds' Bray-Curtis turnover between plots (your empirical data)
-- 'S.total.emp.rds' Sorenson turnover between plots (your empirical data)
-- 'BC.ag.null.rds'  null model Bray-Curtis among-clade component (proportion) of turnover
-- 'BC.wg.null.rds'  null model Bray-Curtis within-clade component (proportion) of turnover
-- 'BC.BC.ws.null.rds'  null model Bray-Curtis within-species component (proportion) of turnover
-- 'S.ag.null.rds'  null model Sorenson among-clade component (proportion) of turnover
-- 'S.wg.null.rds'  null model Sorenson within-clade component (proportion) of turnover
+- 'BC.total.emp.rds' *Bray-Curtis turnover between plots (your empirical data)*
+- 'S.total.emp.rds' *Sorenson turnover between plots (your empirical data)*
+- 'BC.ag.null.rds'  *null model Bray-Curtis among-clade component (proportion) of turnover*
+- 'BC.wg.null.rds'  *null model Bray-Curtis within-clade component (proportion) of turnover*
+- 'BC.BC.ws.null.rds'  *null model Bray-Curtis within-species component (proportion) of turnover*
+- 'S.ag.null.rds'  *null model Sorenson among-clade component (proportion) of turnover*
+- 'S.wg.null.rds'  *null model Sorenson within-clade component (proportion) of turnover*
 - 'SpeciesData.csv'  
 - 'CladeData.csv'  
 - 'clade.data.null.rds' 
@@ -55,7 +55,7 @@ NOTE: this script will do all these calculatations of turnover on a variety of d
 generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.   
 NOTE: plot comparisons are sub-selected to create datasets that compare turnover components across elevational distance while minimizing effects of geographic distance and vice-versa.    
 **INPUTS:** 
-- 'BC.total.emp.rds' **or** 'S.total.emp.rds' (must specify Sorenson or Bray-Curtis)
+- 'BC.total.emp.rds' **or** 'S.total.emp.rds' *(must specify Sorenson or Bray-Curtis)*
 - 'BC.ag.null.rds', BC.wg.null.rds', and BC.ws.null.rds'; **or** 'S.ag.null.rds' and 'S.wg.null.rds' 
 - 'SpeciesData.csv'  
 - 'CladeData.csv'  
@@ -63,11 +63,11 @@ NOTE: plot comparisons are sub-selected to create datasets that compare turnover
 - 'S.wg.null.rds'  
 
 **OUTPUTS:** 
-- 'TurnoverGradients.tiff'  graph of total turnover of plots across elevational distance
-- 'ProportionOfTurnoverGradients.tiff'  graphs comparing components of turnover to null models. Examining across elevational gradient (top) and geographcic distance (bottom)
-- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  graphs comparing just the among-component of turnover to null models (similar to 'ProportionOfTurnoverGradients.tiff')
-- 'LogitProportionOfTurnoverGradients.tiff' same graphs as 'ProportionOfTurnoverGradients.tiff' but with logit transformed regressions.
-- 'GeoVsElevDists.tiff' graph showing the selection of plot comparisions used across geographic and elevational distance
-- 'SppNByClade.tiff'  graphs depicting the distribution of species across clades.
-- 'CladeRangeSizes.tiff'  elevational ranges of clades 
+- 'TurnoverGradients.tiff'  *graph of total turnover of plots across elevational distance
+- 'ProportionOfTurnoverGradients.tiff'  *graphs comparing components of turnover to null models. Examining across elevational gradient (top) and geographcic distance (bottom)
+- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  *graphs comparing just the among-component of turnover to null models (similar to 'ProportionOfTurnoverGradients.tiff')
+- 'LogitProportionOfTurnoverGradients.tiff' *same graphs as 'ProportionOfTurnoverGradients.tiff' but with logit transformed regressions.
+- 'GeoVsElevDists.tiff' *graph showing the selection of plot comparisions used across geographic and elevational distance
+- 'SppNByClade.tiff'  *graphs depicting the distribution of species across clades.
+- 'CladeRangeSizes.tiff'  *elevational ranges of clades 
 - 'Results_summary.txt' 
