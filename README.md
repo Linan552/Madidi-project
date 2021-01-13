@@ -19,8 +19,8 @@ uses the tree dataset to generate a time calibrated phylogeny by placing taxa in
 - 'phylomaker_phylo_all_S3.tre' phylogeny using scenario 3 (see V.phylomaker manual)
 - 'phylomaker_phylo_all_S1.tre' phylogeny using scenario 1 (see V.phylomaker manual)
 ### '03_turnover_decomposition_2021-01-11.R' 
-divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.  
-NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory. 
+divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.    
+NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory.    
 **INPUTS:** 
 - 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
 - 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
