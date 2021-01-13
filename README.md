@@ -31,6 +31,7 @@ uses the tree dataset to generate a time calibrated phylogeny by placing taxa in
 - 'species_data.txt' A list of unique species and morphospecies found within 'ToyData_trees.txt'
 - 'phylomaker_phylo_all_S3.tre' phylogeny using scenario 3 (see V.phylomaker manual)
 - 'phylomaker_phylo_all_S1.tre' phylogeny using scenario 1 (see V.phylomaker manual)
+---
 ### '03_turnover_decomposition_2021-01-11.R' 
 divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.    
 NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory.    
@@ -38,7 +39,6 @@ NOTE: this script will do all these calculatations of turnover on a variety of d
 - 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
 - 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
 - 'phylomaker_phylo_all_S3.tre' or 'phylomaker_phylo_all_S1.tre' Depending on options used   
-
 **OUTPUTS:** 
 - 'BC.total.emp.rds' Bray-Curtis turnover between plots (your empirical data)
 - 'S.total.emp.rds' Sorenson turnover between plots (your empirical data)
@@ -50,6 +50,7 @@ NOTE: this script will do all these calculatations of turnover on a variety of d
 - 'SpeciesData.csv'  
 - 'CladeData.csv'  
 - 'clade.data.null.rds' 
+---
 ### '04_visualize_EVERYTHING_2021-01-12.R' 
 generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.   
 NOTE: plot comparisons are sub-selected to create datasets that compare turnover components across elevational distance while minimizing effects of geographic distance and vice-versa.    
