@@ -38,7 +38,8 @@ NOTE: this script will do all these calculatations of turnover on a variety of d
 - 'CladeData.csv'  
 - 'clade.data.null.rds' 
 ### '04_visualize_EVERYTHING_2021-01-12.R' 
-generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.  
+generates a variety of figures, visualizing components of turnover across a variety of datasets generated in above scripts.   
+NOTE: plot comparisons are sub-selected to create datasets that compare turnover components across elevational distance while minimizing effects of geographic distance and vice-versa.    
 **INPUTS:** 
 - 'BC.total.emp.rds' or 'S.total.emp.rds' (must specify Sorenson or Bray-Curtis)
 - 'BC.ag.null.rds', BC.wg.null.rds', and BC.ws.null.rds'; or 'S.ag.null.rds' and 'S.wg.null.rds' 
@@ -48,13 +49,13 @@ generates a variety of figures, visualizing components of turnover across a vari
 - 'S.wg.null.rds'  
 
 **OUTPUTS:** 
-- 'TurnoverGradients.tiff'  
-- 'ProportionOfTurnoverGradients.tiff'  
-- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  
-- 'LogitProportionOfTurnoverGradients.tiff'
-- 'GeoVsElevDists.tiff'
-- 'SppNByClade.tiff'
-- 'CladeRangeSizes.tiff'
+- 'TurnoverGradients.tiff'  graph of total turnover of plots across elevational distance
+- 'ProportionOfTurnoverGradients.tiff'  graphs comparing components of turnover to null models. Examining across elevational gradient (top) and geographcic distance (bottom)
+- 'DifferenceBetweenTurnoverComponentsGradients.tiff'  graphs comparing just the among-component of turnover to null models (similar to 'ProportionOfTurnoverGradients.tiff')
+- 'LogitProportionOfTurnoverGradients.tiff' same graphs as 'ProportionOfTurnoverGradients.tiff' but with logit transformed regressions.
+- 'GeoVsElevDists.tiff' graph showing the selection of plot comparisions used across geographic and elevational distance
+- 'SppNByClade.tiff'  graphs depicting the distribution of species across clades.
+- 'CladeRangeSizes.tiff'  elevational ranges of clades 
 - 'Results_summary.txt' 
 
 ## what R-packages you will need to run these scripts
