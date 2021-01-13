@@ -24,6 +24,7 @@ divides phylogeny into clades based on specified age (30 or 60 my old) and decom
 - 'ToyData_trees.txt' A dataset representing individuals trees surveyed within a set of plots  
 - 'ToyData_plots.txt' A dataset containing info about the plots from which trees were surveyed 
 - 'phylomaker_phylo_all_S3.tre' or 'phylomaker_phylo_all_S1.tre' Depending on options used   
+
 **OUTPUTS:** 
 - 'BC.total.emp.rds' Bray-Curtis turnover between plots (your empirical data)
 - 'S.total.emp.rds' Sorenson turnover between plots (your empirical data)
