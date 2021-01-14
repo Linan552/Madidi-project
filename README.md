@@ -47,11 +47,10 @@ components of either Bray-Curtis or Sorensen distance metrics.
   -'BC.ag': is the component of 'BC' owing to turnover of species AMONG groups.
 
 
--'sorensen' - the second list, contains three elements:
-
-  -'S': is a 'dist' object with the total Sorensen distace. 
-  -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.
-  -'S.ag': is the component of "S" owing to turnover of species AMONG groups.
+-'sorensen' - the second list, contains three elements:   
+  -'S': is a 'dist' object with the total Sorensen distace.   
+  -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.   
+  -'S.ag': is the component of "S" owing to turnover of species AMONG groups.   
 
 ---
 ### '01_and_02_make_phylogeny.R' 
