@@ -23,21 +23,18 @@ Note: We have provided a toy dataset (made up of fictional data) to run the scri
 ---
 ## what each script does
 ### 'decompose_my_beta_2019-09-30.R'   
-created by J. Sebastian Tello & Ivan Jimenez
+created by J. Sebastian Tello & Ivan Jimenez    
 This function calculates components of the Bray-Curtis and Sorensen measurements of distance between communities (i.e. tunover).   
 For Sorensen, there are two components: (a) within and (b) among groups (i.e. clades). For Bray-Curtis  
 there are three components: (a) within species, (b) among species but 
-within groups and (c) among species among groups. 
+within groups and (c) among species among groups.    
 **INPUTS:**   
-## compo - this is a composition table with sites in rows and species in 
-##         columns
+- compo - this is a composition table with sites in rows and species in columns
 
-## sp.by.group - this is a data.frame with two columns: 'spp' and "groups'. The  
-##               column 'spp' contains names that must match the column names  
-##               in 'compo'. The column 'groups' indicates to what group 
-##               (i.e clade) each species belongs.
-
-
+- sp.by.group - this is a data.frame with two columns: 'spp' and "groups'. The  
+               column 'spp' contains names that must match the column names    
+             in 'compo'. The column 'groups' indicates to what group   
+               (i.e clade) each species belongs.    
 **OUTPUTS:**  
 The output is a list containing another two lists, each of which has the 
 components of either Bray-Curtis or Sorensen distance metrics. 
@@ -54,7 +51,7 @@ components of either Bray-Curtis or Sorensen distance metrics.
   -'S': is a 'dist' object with the total Sorensen distace. 
   -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.
   -'S.ag': is the component of "S" owing to turnover of species AMONG groups.
-
+---
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
 **INPUTS:** 'ToyData_trees.txt' *A dataset representing individuals trees surveyed within a set of plots*   
