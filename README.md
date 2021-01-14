@@ -35,9 +35,10 @@ within groups and (c) among species among groups.
                column 'spp' contains names that must match the column names    
              in 'compo'. The column 'groups' indicates to what group   
                (i.e clade) each species belongs.    
-**OUTPUTS:**  
+
+**OUTPUTS:**   
 The output is a list containing another two lists, each of which has the 
-components of either Bray-Curtis or Sorensen distance metrics. 
+components of either Bray-Curtis or Sorensen distance metrics.    
 
 -'bray-curtis' - the first list, contains four elements:
   -'BC': is a 'dist' object with the total Bray-Curtis distace. The other three elements are additive fractions of 'BC'. 
@@ -51,6 +52,7 @@ components of either Bray-Curtis or Sorensen distance metrics.
   -'S': is a 'dist' object with the total Sorensen distace. 
   -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.
   -'S.ag': is the component of "S" owing to turnover of species AMONG groups.
+
 ---
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
