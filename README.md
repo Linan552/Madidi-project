@@ -22,6 +22,39 @@ Note: We have provided a toy dataset (made up of fictional data) to run the scri
 - library(grr)
 ---
 ## what each script does
+### 'decompose_my_beta_2019-09-30.R'   
+created by J. Sebastian Tello & Ivan Jimenez
+This function calculates components of the Bray-Curtis and Sorensen measurements of distance between communities (i.e. tunover).   
+For Sorensen, there are two components: (a) within and (b) among groups (i.e. clades). For Bray-Curtis  
+there are three components: (a) within species, (b) among species but 
+within groups and (c) among species among groups. 
+**INPUTS:**   
+## compo - this is a composition table with sites in rows and species in 
+##         columns
+
+## sp.by.group - this is a data.frame with two columns: 'spp' and "groups'. The  
+##               column 'spp' contains names that must match the column names  
+##               in 'compo'. The column 'groups' indicates to what group 
+##               (i.e clade) each species belongs.
+
+
+**OUTPUTS:**  
+The output is a list containing another two lists, each of which has the 
+components of either Bray-Curtis or Sorensen distance metrics. 
+
+-'bray-curtis' - the first list, contains four elements:
+  -'BC': is a 'dist' object with the total Bray-Curtis distace. The other three elements are additive fractions of 'BC'. 
+  -'BC.ws': is the component of 'BC' owing to within-species variation in abundance. 
+  -'BC.wg': is the component of 'BC' owing to turnover of species WITHIN groups.   
+  -'BC.ag': is the component of 'BC' owing to turnover of species AMONG groups.
+
+
+-'sorensen' - the second list, contains three elements:
+
+  -'S': is a 'dist' object with the total Sorensen distace. 
+  -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.
+  -'S.ag': is the component of "S" owing to turnover of species AMONG groups.
+
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
 **INPUTS:** 'ToyData_trees.txt' *A dataset representing individuals trees surveyed within a set of plots*   
@@ -33,7 +66,7 @@ uses the tree dataset to generate a time calibrated phylogeny by placing taxa in
 - 'phylomaker_phylo_all_S1.tre' *phylogeny using scenario 1 (see V.phylomaker manual)*
 ---
 ### '03_turnover_decomposition_2021-01-11.R' 
-divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components.  In addition, the script creates a null model of turnover.    
+divides phylogeny into clades based on specified age (30 and 60 my old) and decomposes turnover in two ways (Bray-Curtis and Sorenson), into among- and within-clade components usiing 'decompose_my_beta_2019-09-30.R'.  In addition, the script creates a null model of turnover.    
 NOTE: this script will do all these calculatations of turnover on a variety of datasets (with or without morphospecies, varying clade ages) and will output results of all these in the /04_Results/ dierctory.    
 **INPUTS:** 
 - 'ToyData_trees.txt' *A dataset representing individuals trees surveyed within a set of plots*  
