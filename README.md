@@ -29,31 +29,26 @@ For Sorensen, there are two components: (a) within and (b) among groups (i.e. cl
 there are three components: (a) within species, (b) among species but 
 within groups and (c) among species among groups.    
 **INPUTS:**   
-- compo - this is a composition table with sites in rows and species in columns
+- compo - *this is a composition table with sites in rows and species in columns*
 
-- sp.by.group - this is a data.frame with two columns: 'spp' and "groups'. The  
-               column 'spp' contains names that must match the column names    
-             in 'compo'. The column 'groups' indicates to what group   
-               (i.e clade) each species belongs.    
+- sp.by.group - *this is a data.frame with two columns: 'spp' and "groups'. The*  
+               *column 'spp' contains names that must match the column names*    
+             *in 'compo'. The column 'groups' indicates to what group*   
+               *(i.e clade) each species belongs.*    
 
 **OUTPUTS:**   
 The output is a list containing another two lists, each of which has the 
 components of either Bray-Curtis or Sorensen distance metrics.    
-
--'bray-curtis' - the first list, contains four elements:
-  -'BC': is a 'dist' object with the total Bray-Curtis distace. The other three elements are additive fractions of 'BC'. 
-  -'BC.ws': is the component of 'BC' owing to within-species variation in abundance. 
-  -'BC.wg': is the component of 'BC' owing to turnover of species WITHIN groups.   
-  -'BC.ag': is the component of 'BC' owing to turnover of species AMONG groups.    
--'sorensen' - the second list, contains three elements:   
-  -'S': is a 'dist' object with the total Sorensen distace.   
-  -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.   
-  -'S.ag': is the component of "S" owing to turnover of species AMONG groups.   
-* Bullet 1
-* Bullet 2
-  * Bullet 2a
-  * Bullet 2b
-* Bullet 3
+  
+* 'bray-curtis' - the first list, contains four elements: 
+  * 'BC': *is a 'dist' object with the total Bray-Curtis distace. The other three elements are additive fractions of 'BC'*
+  * 'BC.ws': *is the component of 'BC' owing to within-species variation in abundance.*  
+  * 'BC.wg': *is the component of 'BC' owing to turnover of species WITHIN groups.*
+  * 'BC.ag': *is the component of 'BC' owing to turnover of species AMONG groups.*
+* 'sorensen' - *the second list, contains three elements:*  
+  * 'S': *is a 'dist' object with the total Sorensen distace.* 
+  * 'S.wg': *is the component of "S" owing to turnover of species WITHIN groups.*  
+  * 'S.ag': *is the component of "S" owing to turnover of species AMONG groups*
 ---
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
