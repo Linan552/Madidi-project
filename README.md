@@ -44,14 +44,16 @@ components of either Bray-Curtis or Sorensen distance metrics.
   -'BC': is a 'dist' object with the total Bray-Curtis distace. The other three elements are additive fractions of 'BC'. 
   -'BC.ws': is the component of 'BC' owing to within-species variation in abundance. 
   -'BC.wg': is the component of 'BC' owing to turnover of species WITHIN groups.   
-  -'BC.ag': is the component of 'BC' owing to turnover of species AMONG groups.
-
-
+  -'BC.ag': is the component of 'BC' owing to turnover of species AMONG groups.    
 -'sorensen' - the second list, contains three elements:   
   -'S': is a 'dist' object with the total Sorensen distace.   
   -'S.wg': is the component of "S" owing to turnover of species WITHIN groups.   
   -'S.ag': is the component of "S" owing to turnover of species AMONG groups.   
-
+* Bullet 1
+* Bullet 2
+  * Bullet 2a
+  * Bullet 2b
+* Bullet 3
 ---
 ### '01_and_02_make_phylogeny.R' 
 uses the tree dataset to generate a time calibrated phylogeny by placing taxa into Smith and Brown’s (2018) global mega-phylogeny of seed plants  (via V.phylomaker).   
