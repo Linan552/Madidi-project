@@ -1,4 +1,4 @@
-# Madidi-project IN PROGRESS not working currently
+# Madidi-project
 Scripts used in analysis of phylogenetic turnover across environmental gradients (elevation in this case)
 ## intended use 
 These scripts represent those used for our recent manucript:   
