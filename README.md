@@ -9,17 +9,17 @@ A results folder will be created with figures, stats, etc.
 Note: We have provided a toy dataset (made up of fictional data) to run the scripts. Original data used in our study can be found at https://doi.org/10.5281/zenodo.4276558. 
 
 ## what R-packages you will need to run these scripts
-- library(dplyr)
-- library(data.table)
-- library(V.PhyloMaker)
-- library(picante)
-- library(phytools)
-- library(vegan)
-- library(latticeExtra)
-- library(plyr)
-- library(gtools)
-- library(geosphere)
-- library(grr)
+- dplyr
+- data.table
+- V.PhyloMaker
+- picante
+- phytools
+- vegan
+- latticeExtra
+- plyr
+- gtools
+- geosphere
+- grr
 ---
 ## what each script does
 ### 'decompose_my_beta_2019-09-30.R'   
